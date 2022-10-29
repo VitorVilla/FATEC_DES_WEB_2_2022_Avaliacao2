@@ -7,9 +7,9 @@ $db->selectLogin();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     session_start();
     foreach ($db->users as $index => $value) {
-        if ($_POST['user'] == $db->users[$index] and $_POST['senha'] == $db->senha[$index]) {
+        if ($_POST['user'] == $db->users[$index] and $_POST['senha'] == $db->passwords[$index]) {
             $_SESSION['loggedin'] = TRUE;
-            $_SESSION["user"] = $db->users[$index];
+            $_SESSION["username"] = $db->users[$index];
             header("location: filmes.php");
             break;
         } else {

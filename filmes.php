@@ -12,7 +12,6 @@ if (isset($_POST['nome']) && isset($_POST['genero']) && isset($_POST['diretor'])
     $nome = $_POST['nome'];
     $genero = $_POST['genero'];
     $diretor = $_POST['diretor'];
-
     $db->inserir($nome, $genero, $diretor);
 }
 ?>
@@ -36,7 +35,7 @@ if (isset($_POST['nome']) && isset($_POST['genero']) && isset($_POST['diretor'])
     <div class="wrapper">
         <h2>Cadastro de Filmes</h2>
         <br>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             <div class="form-group">
                 <label>Nome de Filme:</label>
                 <input style="width: 200px;" type="text" name="nome" class="form-control" value="">
@@ -58,6 +57,9 @@ if (isset($_POST['nome']) && isset($_POST['genero']) && isset($_POST['diretor'])
             </div>
         </form>
     </div>
+
+    <a href="exibir.php" class="btn btn-primary">Exibir filmes</a>
+    <a href="logout.php" class="btn btn-danger">logout</a>
 </body>
 
 </html>

@@ -21,14 +21,14 @@ class banco
     {
         try {
             $this->connect();
-            $sql = "SELECT * FROM usuarios";
+            $sql = "SELECT * FROM usuario";
             $result = $this->con->query($sql)->fetchAll();
             if ($result == false) {
                 echo "Não foi possível achar o usuario";
             } else {
                 foreach ($result as $index => $row) {
-                    $this->user[$index] = $row['usuario'];
-                    $this->senha[$index] = $row['senha'];
+                    $this->users[$index] = $row['user'];
+                    $this->passwords[$index] = $row['senha'];
                 }
             }
         } catch (PDOException $e) {
@@ -53,7 +53,7 @@ class banco
         try {
             $this->connect();
             $sql = "SELECT * FROM filme";
-            $result = $this->conn->query($sql)->fetchAll();
+            $result = $this->con->query($sql)->fetchAll();
             if ($result == false) {
                 echo "Sem filmes cadastrados :(";
             } else {

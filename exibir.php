@@ -15,7 +15,13 @@ if ($_SESSION['loggedin'] == FALSE) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style type="text/css">
+        body {
+            font: 14px sans-serif;
+            text-align: center;
+        }
+    </style>
     <title>Filmes</title>
 </head>
 
@@ -34,5 +40,4 @@ $db->selct();
 ?>
 
 <br>
-<a href="index.php" class="link">Cadastrar filmes</a>
-<a href="logout.php" class="link">logout</a>
+<a href="logout.php" class="btn btn-danger">logout</a>

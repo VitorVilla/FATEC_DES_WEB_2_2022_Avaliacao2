@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Out-2022 às 00:31
+-- Tempo de geração: 29-Out-2022 às 04:40
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -48,7 +48,10 @@ INSERT INTO `filme` (`id_filme`, `nome`, `genero`, `diretor`) VALUES
 (18, 'Poderoso chefão', 'Ação', 'Copolla'),
 (19, 'a', 'a', 'a'),
 (20, 'a', 'a', 'a'),
-(21, 'a', 'a', 'a');
+(21, 'a', 'a', 'a'),
+(22, 'a', 'a', 'a'),
+(23, 'a', 'a', 'a'),
+(24, 'a', 'a', 'a');
 
 -- --------------------------------------------------------
 
@@ -67,7 +70,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_user`, `user`, `senha`) VALUES
-(3, 'fatec', 'senha');
+(3, 'fatec', 'senha'),
+(4, 'vitor', '1234');
 
 --
 -- Índices para tabelas despejadas
@@ -93,13 +97,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `filme`
 --
 ALTER TABLE `filme`
-  MODIFY `id_filme` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_filme` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
